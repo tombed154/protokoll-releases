@@ -62,3 +62,12 @@ odoslanie do vášho OpenProjectu, ktoré vždy potvrdzujete vy.
 
 Hlásenie pošlite tomu, od koho máte odkaz na túto stránku. Obsah skutočných
 stretnutí do hlásenia nevkladajte.
+
+## Licencie
+
+Protokoll obsahuje súčasti tretích strán, napríklad FFmpeg (LGPL-2.1) s kodekom
+Opus (BSD), whisper.cpp a llama.cpp (MIT) a knižnice NVIDIA CUDA. Ich licencie a
+pôvod sú v súbore `THIRD_PARTY_NOTICES.md` v priečinku inštalácie.
+
+Zdrojový kód pribaleného FFmpeg je priložený ku každému vydaniu ako
+`ffmpeg-<verzia>.tar.xz` a `opus-<verzia>.tar.gz`.
