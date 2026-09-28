@@ -7,7 +7,10 @@ zvuk, prepis ani súhrn ho neopúšťajú.
 Tento repozitár obsahuje iba vydania aplikácie, nie jej zdrojový kód.
 
 ## Ukážka aplikácie
+
 https://github.com/user-attachments/assets/88abd75e-fc59-48fa-87be-23b3eb520091
+
+Ukážka používa vymyslené stretnutie.
 
 ## Inštalácia
 
