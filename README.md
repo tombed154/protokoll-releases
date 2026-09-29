@@ -61,13 +61,15 @@ odoslanie do vášho OpenProjectu, ktoré vždy potvrdzujete vy.
 
 ## Nahlásenie problému
 
+Problém nahláste v [Issues](../../issues/new/choose) cez formulár **Nahlásiť problém**:
+
 1. V **Nastavenia → Diagnostika** si opíšte verziu aplikácie.
 2. Tým istým miestom otvorte priečinok s logmi a priložte najnovší súbor. Log
    neobsahuje prepis, súhrn, úlohy, token ani cesty k vašim súborom.
 3. Opíšte, čo ste robili, čo ste čakali a čo sa stalo.
 
-Hlásenie pošlite tomu, od koho máte odkaz na túto stránku. Obsah skutočných
-stretnutí do hlásenia nevkladajte.
+Hlásenia sú verejné. Nevkladajte do nich obsah skutočných stretnutí ani
+screenshoty s ich textom.
 
 ## Licencie
 

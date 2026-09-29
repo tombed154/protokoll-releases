@@ -1,0 +1,52 @@
+name: Nahlásiť problém
+description: Niečo nefunguje alebo sa správa inak, než by malo.
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Hlásenie je verejné.** Nevkladajte doň obsah skutočných stretnutí: prepis, súhrn, úlohy, mená ani screenshoty, na ktorých je text stretnutia. Log z Protokollu tieto údaje neobsahuje, ten priložiť môžete.
+  - type: input
+    id: version
+    attributes:
+      label: Verzia Protokollu
+      description: Nájdete ju v Nastavenia → Diagnostika.
+      placeholder: 0.1.0-beta.3
+    validations:
+      required: true
+  - type: input
+    id: system
+    attributes:
+      label: Windows a počítač
+      description: Verzia Windows, veľkosť RAM a grafická karta, ak ju poznáte.
+      placeholder: Windows 11, 16 GB RAM, NVIDIA GeForce RTX 3050
+  - type: textarea
+    id: steps
+    attributes:
+      label: Čo ste robili
+      description: Kroky, po ktorých sa problém objavil.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Čo ste čakali
+  - type: textarea
+    id: actual
+    attributes:
+      label: Čo sa stalo
+      description: Presné znenie chybovej hlášky pomôže najviac.
+    validations:
+      required: true
+  - type: textarea
+    id: log
+    attributes:
+      label: Log
+      description: Nastavenia → Diagnostika → otvoriť priečinok s logmi. Najnovší súbor sem pretiahnite.
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Súkromie
+      options:
+        - label: Hlásenie neobsahuje obsah skutočného stretnutia.
+          required: true
