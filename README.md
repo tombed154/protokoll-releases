@@ -1,7 +1,8 @@
 # Protokoll
 
 Protokoll je aplikácia pre Windows, ktorá z nahrávky stretnutia vytvorí prepis,
-štruktúrovaný súhrn a návrhy úloh. Všetko spracovanie beží na vašom počítači;
+štruktúrovaný súhrn a návrhy úloh. Pri nahrávke hovoru rozlíši hovoriacich a mená
+účastníkov vie prečítať z okna hovoru. Všetko spracovanie beží na vašom počítači;
 zvuk, prepis ani súhrn ho neopúšťajú.
 
 Tento repozitár obsahuje iba vydania aplikácie, nie jej zdrojový kód.
@@ -33,14 +34,25 @@ aktualizácie; sťahovať ich nemusíte.
 | Grafika s ovládačom Vulkan 1.2 / CUDA | Voliteľné. Bez nej beží prepis na procesore, len pomalšie.                      |
 | OpenProject a API token               | Voliteľné. Bez nich funguje všetko okrem odoslania do OpenProjectu.             |
 
-Po prvom spustení stiahnite v aplikácii dva modely:
+Po prvom spustení stiahnite v aplikácii tri modely:
 
-- **Nastavenia → Prepis:** odporúčaný prepisovací model (asi 834 MB).
+- **Nastavenia → Prepis:** odporúčaný prepisovací model (asi 715 MB) a model
+  rozlíšenia hovoriacich (asi 107 MB).
 - **Nastavenia → AI spracovanie:** model **Gemma 4 E4B** pre súhrny a úlohy
   (asi 4,6 GB).
 
-Oba sa sťahujú z pevne určenej verzie a použijú sa až po overení kontrolného
+Všetky sa sťahujú z pevne určenej verzie a použijú sa až po overení kontrolného
 súčtu. Potom aplikácia funguje aj bez internetu.
+
+## Hovoriaci a mená z hovoru
+
+Pri nahrávke hovoru Protokoll rozlíši hlasy: vaše repliky sú „Ja“, ostatné
+„Účastník 1, 2, …“. Počas nahrávania nájde okno hovoru podľa mikrofónu a zvuku
+a prečíta z neho mená účastníkov cez rozhranie prístupnosti Windows – bez
+rozšírenia prehliadača, okno netreba presúvať. V Jitsi Meet sa mená priradia
+hlasom samy; v Google Meet a Microsoft Teams na webe sa ponúknu a meno hlasu
+vyberiete jedným klikom v plávajúcom paneli. Čítanie okna vypnete v paneli
+nahrávania.
 
 ## Aktualizácie
 
@@ -57,7 +69,9 @@ stretnutiach.
 
 Stretnutia sú lokálne súbory v dátovom adresári aplikácie a odinštalovanie ich
 nemaže. Sieť aplikácia používa iba na stiahnutie modelov, kontrolu novej verzie a
-odoslanie do vášho OpenProjectu, ktoré vždy potvrdzujete vy.
+odoslanie do vášho OpenProjectu, ktoré vždy potvrdzujete vy. Z okna hovoru sa
+čítajú iba mená a stav mikrofónu účastníkov; chat ani titulky nie a nič z toho
+sa nikam neposiela.
 
 ## Nahlásenie problému
 
@@ -74,8 +88,11 @@ screenshoty s ich textom.
 ## Licencie
 
 Protokoll obsahuje súčasti tretích strán, napríklad FFmpeg (LGPL-2.1) s kodekom
-Opus (BSD), whisper.cpp a llama.cpp (MIT) a knižnice NVIDIA CUDA. Ich licencie a
-pôvod sú v súbore `THIRD_PARTY_NOTICES.md` v priečinku inštalácie.
+Opus (BSD), NVIDIA NeMo-Speech.cpp (Apache-2.0), whisper.cpp a llama.cpp (MIT) a
+knižnice NVIDIA CUDA. Ich licencie a pôvod sú v súbore `THIRD_PARTY_NOTICES.md` v
+priečinku inštalácie. Modely sa sťahujú pri prvom spustení pod vlastnými
+licenciami: slovenský Parakeet od KInIT (CC-BY-4.0), Nemotron 3 Diarization od
+NVIDIA (OpenMDW 1.1) a Gemma 4 od Google.
 
 Zdrojový kód pribaleného FFmpeg je priložený ku každému vydaniu ako
 `ffmpeg-<verzia>.tar.xz` a `opus-<verzia>.tar.gz`.
